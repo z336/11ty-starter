@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if page.url == '/' %} {{ metadata.title }} {% else %} {{ title }} | {{ metadata.title }} {%
+      endif %}
+    </title>
+    <meta name="description" content="{{ description or metadata.description }}" />
+    <meta name="generator" content="{{ eleventy.generator }}" />
+    <meta name="theme-color" content="#000" />
+    <link rel="icon" href="{{ '/assets/images/favicon.svg' | url }}" type="image/svg+xml" />
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
+    <link
+      rel="preload"
+      href="{{ '/assets/fonts/AUTHENTICSans-90.woff' | url }}"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="{{ '/assets/fonts/AUTHENTICSans-130.woff' | url }}"
+      as="font"
+      type="font/woff"
+      crossorigin
+    />
+    <script type="module" src="/assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    {% include 'partials/header.html' %}
+    <main id="main">{{ content }}</main>
+    {% include 'partials/footer.html' %}
+  </body>
+</html>

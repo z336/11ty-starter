@@ -1,0 +1,19 @@
+.prose {
+  --flow-space: var(--space-xl-2xl);
+  --wrapper-max-width: 60rem;
+  mark {
+    background: var(--color-primary-glare);
+  }
+}
+
+.prose :is(h2, h3, h4) + * {
+  --flow-space: var(--space-s-m);
+}
+
+.prose .heading-anchor:is(:hover, :focus) {
+  text-decoration: solid underline 0.1rem;
+  text-underline-offset: 0.35rem;
+}
+.prose .heading-anchor {
+  text-decoration: none;
+}

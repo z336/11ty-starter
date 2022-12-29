@@ -1,0 +1,17 @@
+<a href="#main" class="skip-link">{{ metadata.skipContent }}</a>
+<header>
+  <div class="wrapper | region | site-header">
+    <nav>
+      <ul>
+        {% for item in navigation.pages %}
+        <li>
+          <a href="{{ item.url }}"
+          {% if currentPage == item.url %}aria-current="page"{% endif %}>
+          {{ item.title }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>
