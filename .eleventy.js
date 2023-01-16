@@ -3,7 +3,7 @@ const { readableDate, htmlDateString, getFullYear } = require("./config/filters/
 const markdown = require("./config/plugins/index.js");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addWatchTarget("./src/sass/");
+  eleventyConfig.addWatchTarget("./src/assets/sass/");
 
   // Process Yaml files
   eleventyConfig.addDataExtension("yaml", load);
